@@ -73,7 +73,8 @@ class LLMWareConfig:
                     "llmware_path_name": "llmware_data" + os.sep}
     else:
         _base_fp = {"home_path": os.environ.get("HOME"),
-                    "llmware_path_name": "llmware_data" + os.sep}
+                    # "home_path": "/media/psf/development/RAG-Tool-Collection/RAG-llmware" + os.sep,
+                    "llmware_path_name": "/media/psf/development/RAG-Tool-Collection/RAG-llmware/llmware_data" + os.sep}
 
     _fp = {"model_repo_path_name": "model_repo" + os.sep,
            "library_path_name": "accounts" + os.sep,
@@ -166,6 +167,7 @@ class LLMWareConfig:
     @classmethod
     def get_model_repo_path(cls):
         """Get model repo absolute folder directory path"""
+        # return os.path.join("/media", "psf", "development", "ai-models")
         return os.path.join(cls._base_fp["home_path"],cls._base_fp["llmware_path_name"], cls._fp["model_repo_path_name"])
 
     @classmethod

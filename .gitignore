@@ -14,3 +14,7 @@ docs/_site/
 
 # Mac
 .DS_Store/
+
+llmware_data/model_repo/*
+
+
